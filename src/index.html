@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
   <script type="module" src="./index.js"></script>
 </head>
-<body>
 
+<body>
+  <div class="header">
+    <label class="color-picker">
+      <input type="color">
+    </label>
+    <select name="" class="mode-picker">
+      <option value="monochrome">Monochrome</option>
+      <option value="monochrome-dark">Monochrome-dark</option>
+      <option value="monochrome-light">Monochrome-light</option>
+      <option value="analogic">Analogic</option>
+      <option value="complement">Complement</option>
+      <option value="analogic-complement">Analogic-complement</option>
+      <option value="triad">Triad</option>
+    </select>
+    <button class="get-btn">Get color scheme</button>
+  </div>
+
+  <div class="colors">
+    <div class="color-cont">
+      <div class="color-display" id="color1"></div>
+      <p class="color-val">#f55a5a</p>
+    </div>
+    <div class="color-cont">
+      <div class="color-display" id="color2"></div>
+      <p class="color-val">#2b283a</p>
+    </div>
+    <div class="color-cont">
+      <div class="color-display" id="color3"></div>
+      <p class="color-val">#fbf3ab</p>
+    </div>
+    <div class="color-cont">
+      <div class="color-display" id="color4"></div>
+      <p class="color-val">#aad1b6</p>
+    </div>
+    <div class="color-cont">
+      <div class="color-display" id="color5"></div>
+      <p class="color-val">#a626d3</p>
+    </div>
+  </div>
 </body>
+
 </html>
