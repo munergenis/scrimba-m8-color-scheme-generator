@@ -35,8 +35,15 @@ function getHexColorNumber() {
 }
 
 function copyColorToClipboard(color) {
-  // handle copy to clipboard
-  showModalInColor(color);
+  const colorVal = getColorVal(color);
+  navigator.clipboard.writeText(colorVal)
+    .then(() => showModalInColor(color), () => alert("Failed to copy"))
+  ;
+}
+
+function getColorVal(color) {
+  const colorValIndex = Number(color.split("").pop()) - 1;
+  return colorValElArray[colorValIndex].textContent;
 }
 
 function showModalInColor(color) {

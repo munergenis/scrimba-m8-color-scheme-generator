@@ -7,6 +7,7 @@ body {
 }
 
 /* Header-layout */
+
 .header {
   z-index: 1;
   padding: 1.5em 1em;
@@ -48,6 +49,7 @@ input[type="color"] {
 }
 
 /* Colors-layout */
+
 .colors {
   flex-grow: 1;
   display: flex;
@@ -79,6 +81,7 @@ input[type="color"] {
 }
 
 /* Copied modal */
+
 .copied-modal {
   background-color: darkslategray;
   width: 30%;
@@ -116,4 +119,12 @@ input[type="color"] {
 
 #color5 {
   background-color: #a626d3;
+}
+
+/* Cursor pointers */
+
+.color-display:hover,
+.get-btn:hover,
+input[type="color"]:hover {
+  cursor: pointer;
 }
