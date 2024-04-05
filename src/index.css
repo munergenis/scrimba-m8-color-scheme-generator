@@ -10,7 +10,7 @@ body {
 .header {
   z-index: 1;
   padding: 1.5em 1em;
-  height: 2.25em;
+  height: 2.5em;
   display: flex;
   gap: 0.5em;
   box-shadow: 0 2px 15px #0005;
