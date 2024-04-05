@@ -69,7 +69,7 @@ input[type="color"] {
 }
 
 .color-val {
-  height: 5em;
+  height: 4em;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -84,12 +84,9 @@ input[type="color"] {
 
 .copied-modal {
   background-color: darkslategray;
-  width: 30%;
-  min-width: 80px;
-  max-width: 160px;
   text-align: center;
   color: white;
-  font-size: 1.25rem;
+  font-size: 0.85rem;
   padding: 1em;
   opacity: 70%;
   border-radius: 5px;
@@ -127,4 +124,20 @@ input[type="color"] {
 .get-btn:hover,
 input[type="color"]:hover {
   cursor: pointer;
+}
+
+@media (width <= 400px) {
+  .colors {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+
+  .get-btn {
+    width: 100%;
+    background-color: lightgray;
+  }
 }
