@@ -8,9 +8,10 @@ document.addEventListener("click", (e) => {
     fetch(`https://www.thecolorapi.com/scheme?hex=${selectedColor}&mode=${selectedMode}`)
       .then(resp => resp.json())
       .then(data => {
-        data.colors.forEach(color => {
-          console.log(color.hex.value);
-        });
+        const colorDisplayElArray = document.querySelectorAll(".color-display");
+        for (const color in data.colors) {
+          colorDisplayElArray[color].style.backgroundColor = data.colors[color].hex.value;
+        }
       });
   } else if (e.target.dataset.color) {
     const selectedColor = e.target.dataset.color;
