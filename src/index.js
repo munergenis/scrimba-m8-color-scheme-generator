@@ -1,5 +1,7 @@
 const inputColorEl = document.querySelector("#input-color");
 const inputModeEl = document.querySelector("#input-mode");
+const colorDisplayElArray = document.querySelectorAll(".color-display");
+const colorValElArray = document.querySelectorAll(".color-val");
 
 document.addEventListener("click", (e) => {
   if (e.target.id === "get-btn") {
@@ -8,9 +10,9 @@ document.addEventListener("click", (e) => {
     fetch(`https://www.thecolorapi.com/scheme?hex=${selectedColor}&mode=${selectedMode}`)
       .then(resp => resp.json())
       .then(data => {
-        const colorDisplayElArray = document.querySelectorAll(".color-display");
         for (const color in data.colors) {
           colorDisplayElArray[color].style.backgroundColor = data.colors[color].hex.value;
+          colorValElArray[color].textContent = data.colors[color].hex.value;
         }
       });
   } else if (e.target.dataset.color) {
